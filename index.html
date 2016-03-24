@@ -14,17 +14,7 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/garden.js"></script>
 <script type="text/javascript" src="js/functions.js"></script>
-<script type="text/javascript">
-	function newDate(){
-		var curDate=new Date();
-		if(curDate.getMonth()+1<10)
-			var curDateStr=curDate.getFullYear()+"—"+"0"+(curDate.getMonth()+1)+"—"+curDate.getDate();
-		else
-			var curDateStr=curDate.getFullYear()+"—"+(curDate.getMonth()+1)+"—"+curDate.getDate();
-		document.getElementById("curDate").innerHTML="*"+curDateStr+".";
-	}
-	window.setInterval("newDate()");
-</script>
+
 </script>
 </head>
 <body>
@@ -33,11 +23,11 @@
 	<div id="content">
 		<div id="code">
 			<span class="comments">/**</span><br />
-			<span class="space"/><span class="comments">*2015—12-01,</span><br />
+			<span class="space"/><span class="comments">*2015—12-24,</span><br />
 			<span class="space"/><span class="comments" id="curDate"></span><br />
 			<span class="space"/><span class="comments">*/</span><br />
-			Boy name = <span class="keyword">Mr</span> Feng<br />
-			Girl name = <span class="keyword">Mrs</span> Han<br />
+			Boy name = <span class="keyword">Mr</span> Shi<br />
+			Girl name = <span class="keyword">Mrs</span> Ye<br />
 			<span class="comments">// Fall in love river. </span><br />
 			The boy love the girl;<br />
 			<span class="comments">// They love each other.</span><br />
@@ -57,18 +47,19 @@
 			<br>
 			<br>
 			I want to say:<br />
-			Baby, I love you forever;<br />
+			Darling, I love you forever;<br />
+			if you never give up,I guard you with life;<br />
 		</div>
 		<div id="loveHeart">
 			<canvas id="garden"></canvas>
 			<div id="words">
 				<div id="messages">
-					亲爱的，这是我们相爱在一起的时光。
+					Darling叶，这是我们相爱的时光。
 					<div id="elapseClock"></div>
 				</div>
 				<div id="loveu">
-					爱你直到永永远远。<br/>
-					<div class="signature">- 冯先生</div>
+					你若不离不弃，我便生死相依。爱你永远。<br/>
+					<div class="signature">- 本杰</div>
 				</div>
 			</div>
 		</div>
@@ -76,10 +67,20 @@
 </div>
 
 <script type="text/javascript">
+//用于设置时间------------------------
+var curDate=new Date();
+if(curDate.getMonth()+1<10)
+	var curDateStr=curDate.getFullYear()+"—"+"0"+(curDate.getMonth()+1)+"—"+curDate.getDate();
+else
+	var curDateStr=curDate.getFullYear()+"—"+(curDate.getMonth()+1)+"—"+curDate.getDate();
+$("#curDate").html("*"+curDateStr+".");
+//--------------------------------------
+
 var offsetX = $("#loveHeart").width() / 2;
 var offsetY = $("#loveHeart").height() / 2 - 55;
 var together = new Date();
-together.setFullYear(2015,11,1);
+//用于设置开始时间2015,11,1表示2015年12月1日
+together.setFullYear(2015,11,24);
 together.setHours(20);
 together.setMinutes(0);
 together.setSeconds(0);
